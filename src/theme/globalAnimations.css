@@ -1,0 +1,292 @@
+/* starting components ///////////////////////////////////////////////////*/
+
+@keyframes slide-fade-txt-d {
+  0% {
+    top: 0vh;
+    opacity: 1;
+  }
+  100% {
+    top: 30vh;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-fade-txt-u {
+  0% {
+    top: 0vh;
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    top: -30vh;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-fade-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-half {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+/* openingAnimation */
+.fade-enter-from {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.fade-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-enter-active {
+  transition: all 0.5s ease;
+}
+
+.fade-leave-from {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.fade-move {
+  transition: all 1s ease;
+}
+
+/* ///////////SAME FADE BUT WITH /////////////// */
+.fadeA-enter-from {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.fadeA-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fadeA-enter-active {
+  transition: all 0.5s ease;
+}
+
+.fadeA-leave-from {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fadeA-leave-to {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.fadeA-leave-active {
+  transition: all 0.5s ease;
+}
+
+.fadeA-move {
+  transition: all 0.5s ease;
+}
+
+/* ///////////SAME FADE BUT WITH Absolute/////////////// */
+.fadeAbs-enter-from {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.fadeAbs-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fadeAbs-enter-active {
+  transition: all 0.5s ease;
+}
+
+.fadeAbs-leave-from {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fadeAbs-leave-to {
+  opacity: 0;
+  transform: scale(0.8);
+  z-index: -1;
+}
+
+.fadeAbs-leave-active {
+  transition: all 0.5s ease;
+  position: absolute;
+}
+
+.fadeAbs-move {
+  transition: all 0.5s ease;
+}
+
+/* ////////////fadeEnter//////////// */
+.fadeEnter-enter-from {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.fadeEnter-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fadeEnter-enter-active {
+  transition: all 0.5s ease;
+}
+
+.fadeEnter-leave-from {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fadeEnter-leave-to {
+  opacity: 0;
+  transform: scale(1);
+}
+
+.fadeEnter-leave-active {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.fadeEnter-enter-active {
+  transition: all 0.5s ease;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+/* ////////////slideD//////////// */
+.slideD-enter-from {
+  clip-path: inset(0 0 100% 0);
+  height: 0;
+  opacity: 0;
+}
+
+.slideD-enter-to {
+  clip-path: inset(0);
+  height: fit-content;
+  opacity: 1;
+}
+
+.slideD-leave-from {
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: inset(0);
+}
+
+.slideD-leave-to {
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: inset(0 0 100% 0);
+  height: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.slideD-enter-active,
+.slideD-leave-active,
+.slideD-move {
+  transition: all 0.5s ease;
+}
+
+.slideD-leave-active {
+  position: absolute;
+}
+
+/* ////////////slideD-delay//////////// */
+
+.slideD-forward-enter-from {
+  clip-path: inset(0 0 100% 0);
+  height: 0 !important;
+  opacity: 0;
+}
+
+.slideD-forward-enter-to {
+  clip-path: inset(0);
+  height: fit-content;
+  opacity: 1;
+}
+
+.slideD-forward-enter-active,
+.slideD-forward-move {
+  transition: all 1s ease-in;
+}
+
+/* ////////////justFade-delay//////////// */
+.justFade-enter-from,
+.justFade-leave-to {
+  opacity: 0;
+}
+
+.justFade-enter-to,
+.justFade-leave-from {
+  opacity: 1;
+}
+
+.justFade-enter-active,
+.justFade-leave-active,
+.justFade-move {
+  transition: all 0.5s ease;
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,189 @@
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+
+/** Ionic CSS Variables **/
+:root {
+  --ion-color-primary: #83a9ad;
+  --ion-color-primary-rgb: 131, 169, 173;
+  --ion-color-primary-contrast: #4c4c50;
+  --ion-color-primary-contrast-rgb: 0, 0, 0;
+  --ion-color-primary-shade: #739598;
+  --ion-color-primary-tint: #8fb2b5;
+  --ion-color-primary-tint-light: #bdd1d3;
+
+  --ion-color-secondary: #e5ebec;
+  --ion-color-secondary-rgb: 229, 235, 236;
+  --ion-color-secondary-contrast: #c4d5d6;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #b3cfd1;
+  --ion-color-secondary-tint: #efeeed;
+
+  --ion-color-tertiary: #d9e3e4;
+  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #d9e3e4;
+  --ion-color-tertiary-tint: #e5ebec;
+
+  --ion-color-success: #c9d4b9;
+  --ion-color-success-rgb: 201, 212, 185;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade: #b1bba3;
+  --ion-color-success-tint: #ced8c0;
+
+  --ion-color-warning: #bab6aa;
+  --ion-color-warning-rgb: 186, 182, 170;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #a4a096;
+  --ion-color-warning-tint: #c1bdb3;
+
+  --ion-color-danger: #edd1d1;
+  --ion-color-danger-rgb: 237, 209, 209;
+  --ion-color-danger-contrast: #000000;
+  --ion-color-danger-contrast-rgb: 0, 0, 0;
+  --ion-color-danger-shade: #d1b8b8;
+  --ion-color-danger-tint: #efd6d6;
+
+  --ion-color-medium: #695f44;
+  --ion-color-medium-rgb: 76, 76, 80;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #434346;
+  --ion-color-medium-tint: #5e5e62;
+
+  --ion-color-light: #f9f6ec;
+  --ion-color-light-rgb: 249, 246, 236;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #dbd8d0;
+  --ion-color-light-tint: #faf7ee;
+
+  --ion-toolbar-color: var(--ion-color-light);
+  --ion-white: #fafafa;
+  --ion-progress-bar-color: #dbd8d0;
+  --ion-progress-bar-prog: var(--ion-color-medium-tint);
+  --ion-podcasts-time-menu-num: var(--ion-color-secondary-shade);
+  --ion-thinking-game: var(--ion-color-secondary-contrast);
+  --audio-disable: #b8b8b8;
+  --form-input-text: var(--ion-color-secondary);
+  --setting-pop-back: #acc2c4;
+  --setting-pop-txt: var(--ion-color-secondary-tint);
+  --setting-input-range-back: #e5ebec;
+  --setting-input-range-thumb: #739598;
+}
+
+body.dark,
+.ios body.dark,
+.md body.dark {
+  --ion-color-primary: #6a9296;
+  --ion-color-primary-rgb: 131, 169, 173;
+  --ion-color-primary-contrast: #4c4c50;
+  --ion-color-primary-contrast-rgb: 0, 0, 0;
+  --ion-color-primary-shade: #739598;
+  --ion-color-primary-tint: #8fb2b5;
+  --ion-color-primary-tint-light: #b1cbce;
+
+  --ion-color-secondary: #e5ebec;
+  --ion-color-secondary-rgb: 80, 200, 255;
+  --ion-color-secondary-contrast: #acc2c4;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #739598;
+  --ion-color-secondary-tint: #252525;
+
+  --ion-color-tertiary: #b1c6c8;
+  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #abcbd0;
+  --ion-color-tertiary-tint: #a6c1c4;
+
+  --ion-color-success: #92a673;
+  --ion-color-success-rgb: 201, 212, 185;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade: #b1bba3;
+  --ion-color-success-tint: #ced8c0;
+
+  --ion-color-warning: #b6b5b3;
+  --ion-color-warning-rgb: 186, 182, 170;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #a4a096;
+  --ion-color-warning-tint: #c1bdb3;
+
+  --ion-color-danger: #b07373;
+  --ion-color-danger-rgb: 237, 209, 209;
+  --ion-color-danger-contrast: #000000;
+  --ion-color-danger-contrast-rgb: 0, 0, 0;
+  --ion-color-danger-shade: #d1b8b8;
+  --ion-color-danger-tint: #efd6d6;
+
+  --ion-color-dark: #f4f5f8;
+  --ion-color-dark-rgb: 244, 245, 248;
+  --ion-color-dark-contrast: #000000;
+  --ion-color-dark-contrast-rgb: 0, 0, 0;
+  --ion-color-dark-shade: #d7d8da;
+  --ion-color-dark-tint: #f5f6f9;
+
+  --ion-color-medium: #f5f6f9;
+  --ion-color-medium-rgb: 152, 154, 162;
+  --ion-color-medium-contrast: #000000;
+  --ion-color-medium-contrast-rgb: 0, 0, 0;
+  --ion-color-medium-shade: #86888f;
+  --ion-color-medium-tint: #a2a4ab;
+
+  --ion-color-light: #222428;
+  --ion-color-light-rgb: 34, 36, 40;
+  --ion-color-light-contrast: #ffffff;
+  --ion-color-light-contrast-rgb: 255, 255, 255;
+  --ion-color-light-shade: #1e2023;
+  --ion-color-light-tint: #383a3e;
+
+  --ion-toolbar-color: var(--ion-color-light);
+  --ion-white: #4c4c50;
+  --ion-progress-bar-color: var(--ion-color-warning);
+  --ion-progress-bar-prog: #757370;
+  --ion-podcasts-time-menu-num: var(--ion-color-primary-tint-light);
+  --ion-thinking-game: var(--ion-color-primary-tint);
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 0.7;
+  --setting-pop-back: #7e7f86;
+  --setting-input-range-back: #e5ebec;
+  --setting-input-range-thumb: #8fb2b5;
+
+}
+
+/*
+ * iOS Dark Theme .ios body.dark {}
+ * -------------------
+ */
+
+/*
+ * Material Design Dark Theme .md body.dark {}
+ * ------------------------------
+ */
+/* 
+
+@media (prefers-color-scheme: dark) {
+  /*
+   * Dark Colors body {}
+   * -------------------------------------------
+   */
+
+/*
+   * iOS Dark Theme .ios body {}
+   * -------------------------------------------
+   */
+
+/*
+   * Material Design Dark Theme   .md body {}
+   * -------------------------------------------
+   */
+
+/*
+  * Dark Colors - all, .ios body.dark, .md body.dark
+  * -------------------------------------------
+  */
+/* } */
