@@ -1,10 +1,12 @@
 <template>
   <div class="container" v-if="!inExam">
     <card-with-line :title="title">
+
       <chose-chaptes-circels
         :explanation="[]"
         :noCircles="noChapters"
         :circlesInfo="circlesInfo"
+        :disableAudio="disableAudio"
         :chooseOne="false"
         @circlesChosen="circlesChosen"
       ></chose-chaptes-circels>
@@ -30,6 +32,7 @@ import TriviaGame from "../SubMenu3/Games/Trivia/TriviaGame.vue";
 import { mapState, mapMutations, mapActions } from "vuex";
 import { IonButton } from "@ionic/vue";
 import ChapterInfo from "@/json/chapters/ChapterInfo";
+import trivia from "@/json/games/trivia.json";
 
 
 export default {
@@ -42,9 +45,14 @@ export default {
   
       ],
       gameType: "5",
+      // noChapters: 11,
+      // circlesInfo: Array.from({ length: 11 }, (_, i) => `פרק ${i+1}`),
+      // disableAudio: 11,
+
       circlesInfo: [],
-      noChapters: 10,
-      ChapterInfo: ChapterInfo,
+      disableAudio: trivia.length,
+      ChapterInfo,
+      noChapters: trivia.length,
       title: "בחר את הפרקים עליהם תרצו להיבחן",
       disableBtn: true,
       inExam: false,
@@ -58,9 +66,9 @@ export default {
   },
 
   created() {
-    for (let i = 0; i < this.noChapters; i++)
-      this.circlesInfo[i] = this.ChapterInfo[i].title;
-  },
+  this.circlesInfo = this.ChapterInfo.map((c) => c.title);
+}
+,
 
   methods: {
     ...mapMutations("navigation", ["hideNavi", "toggleMiniIcon", "smallNavi"]),

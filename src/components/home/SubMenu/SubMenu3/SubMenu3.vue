@@ -8,6 +8,7 @@
         :explanation="[]"
         :noCircles="noChapters"
         :circlesInfo="circlesInfo"
+        :disableAudio="noChapters"
         :chooseOne="false"
         @circlesChosen="circlesChosen"
       ></chose-chaptes-circels>
@@ -60,7 +61,7 @@ export default {
       gamesInfo: gamesInfo,
       ChapterInfo: ChapterInfo,
       circlesInfo: [],
-      noChapters: 10,
+      noChapters: ChapterInfo.length,
     };
   },
 
@@ -69,10 +70,10 @@ export default {
     ...mapState("games", ["gameType", "chosenChapters"]),
   },
 
-  created() {
-    for (let i = 0; i < this.noChapters; i++)
-      this.circlesInfo[i] = this.ChapterInfo[i].title;
+ created() {
+  this.circlesInfo = this.ChapterInfo.map((c) => c.title);
   },
+
 
   methods: {
     ...mapMutations("navigation", ["hideNavi", "toggleMiniIcon"]),
@@ -173,15 +174,14 @@ export default {
 .box {
   display: grid;
   width: 100%;
-  height: fit-content;
-  padding: 5% 10%;
-  align-self: center;
-  grid-template-columns: auto auto auto auto auto;
-  row-gap: 10%;
-  column-gap: 0%;
-  align-items: center;
+  padding: 16px 24px;       /* במקום אחוזים */
+  justify-content: center;  /* מרכז את כל הגריד */
   justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(6, 40px); /* 6 עמודות קבועות */
+  gap: 12px;                              /* רווח אחיד */
 }
+
 
 .games {
   position: relative;
